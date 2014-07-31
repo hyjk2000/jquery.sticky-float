@@ -4,7 +4,7 @@
  * @requires jQuery v1.2.6 or later
  */
 (function ($) {
-    $.fn.fixedFloat = function () {
+    $.fn.stickyFloat = function () {
 		$(this).each(function() {
 			// Preserve the obj in a closure.
 			var _me = $(this);
