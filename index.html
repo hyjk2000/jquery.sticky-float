@@ -64,15 +64,23 @@ footer {
 </header>
 
 <article>
-  <h3>Usage:</h3>
+  <h2>How It Works</h2>
+
+  <ol>
+    <li>Get the target element's offset (<code>offset.left</code> and <code>offset.top</code>), put the the element's margin into account</li>
+    <li>As the document scrolls, when <code>window.scrollY</code> >= <code>offset.top</code>, make the element sticky by setting it to <code>position: fixed</code>, <code>top: 0</code>, <code>left: [offset.left]px</code></li>
+    <li>When resizing the window, un-sticky the element to recalculate <code>offset.left</code>, then make it sticky again</li>
+  </ol>
+
+  <h2>Usage</h2>
 
   <ul>
     <li>Include jQuery (v1.2.6 or later) and jquery.sticky-float.js</li>
     <li>
       Call Sticky Float
-      <div><pre>$(function () {
+      <div><code><pre>$(function () {
     $("#side-nav").stickyFloat();
-});</pre></div>
+});</code></pre></div>
     </li>
   </ul>
 
