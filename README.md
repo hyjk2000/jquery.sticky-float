@@ -1,7 +1,7 @@
 jQuery Sticky Float Plugin
 ===================
 
-Create a sticky elements that always visible as you scroll
+Create sticky elements that always visible as you scroll
 
 ## How It Works
 1. Get the target element's offset (`offset.left` and `offset.top`), put the the element's margin into account
