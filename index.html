@@ -8,47 +8,50 @@ body {
   font: 10.5pt/150% Arial, Helvetica, sans-serif;
   width: 960px;
   margin: 0 auto;
+  padding-bottom: 600px;
 }
 h1 { font-size: 24pt }
 h2 { font-size: 16pt }
 a { color: #36B }
 a:hover { text-decoration: none }
 header {
-	padding: 10px 0;
-	border-bottom: 3px solid #EEE;
+  padding: 10px 0;
+  border-bottom: 3px solid #EEE;
 }
 article {
-	float: left;
-	width: 700px;
+  position: relative;
+  float: left;
+  width: 700px;
 }
 aside {
-	float: right;
-	width: 200px;
-	padding: 10px;
-	background: #EEE;
+  position: absolute;
+  right: -260px;
+  width: 200px;
+  padding: 10px;
+  background: #EEE;
 }
 #download a {
-	color: #36B;
-	text-decoration: none;
-	padding: 5px 10px;
-	background: #CDE;
-	border-radius: 1.5em;
+  color: #36B;
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #CDE;
+  border-radius: 1.5em;
 }
 #download a:hover {
-	background: #DEF;
+  background: #DEF;
 }
 #download a:active {
-	background: #BCD;
+  background: #BCD;
 }
 footer {
-	margin-top: 20px;
-	padding: 10px 0;
-	border-top: 3px solid #EEE;
-	text-align: center;
-	color: #AAA;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 3px solid #EEE;
+  text-align: center;
+  color: #AAA;
 }
 .clrflt {
-	clear: both;
+  clear: both;
 }
 </style>
 </head>
@@ -64,6 +67,19 @@ footer {
 </header>
 
 <article>
+
+  <aside>
+    <h3>jquery.sticky-float</h3>
+    <p>Create a sticky element that always visible as you scroll</p>
+    <p id="download"><a href="https://github.com/hyjk2000/jquery.sticky-float">View the project on Github</a></p>
+    <ul>
+      <li><a href="https://github.com/hyjk2000/jquery.sticky-float/zipball/master">Download <strong>ZIP File</strong></a></li>
+      <li><a href="https://github.com/hyjk2000/jquery.sticky-float/tarball/master">Download <strong>TAR Ball</strong></a></li>
+    </ul>
+    <p>This project is maintained by <a href="https://github.com/hyjk2000">hyjk2000</a></p>
+    <p style="margin-top:300px">Scroll down to bottom - container bottom collision detect</p>
+  </aside>
+
   <h2>How It Works</h2>
 
   <ol>
@@ -84,8 +100,11 @@ footer {
     </li>
   </ul>
 
+  <h2>Limits</h2>
+
   <ul>
     <li>Don't use inline CSS on sticky elements</li>
+    <li>Floating and container element must be positioned first</li>
   </ul>
 
   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
@@ -115,17 +134,6 @@ footer {
   </ul>
 </article>
 
-<aside>
-  <h3>jquery.sticky-float</h3>
-  <p>Create a sticky element that always visible as you scroll</p>
-  <p id="download"><a href="https://github.com/hyjk2000/jquery.sticky-float">View the project on Github</a></p>
-  <ul>
-    <li><a href="https://github.com/hyjk2000/jquery.sticky-float/zipball/master">Download <strong>ZIP File</strong></a></li>
-    <li><a href="https://github.com/hyjk2000/jquery.sticky-float/tarball/master">Download <strong>TAR Ball</strong></a></li>
-  </ul>
-  <p>This project is maintained by <a href="https://github.com/hyjk2000">hyjk2000</a></p>
-</aside>
-
 <div class="clrflt"></div>
 
 <footer>
@@ -133,7 +141,7 @@ footer {
 </footer>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="jquery.sticky-float.js"></script>
+<script type="text/javascript" src="//github.com/hyjk2000/jquery.sticky-float/raw/master/jquery.sticky-float.js"></script>
 <script>$("aside").stickyFloat();</script>
 </body>
 </html>
