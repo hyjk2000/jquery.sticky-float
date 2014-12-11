@@ -16,4 +16,7 @@ $(function () {
     $("#side-nav").stickyFloat();
 });
 ```
+
+## Limits
 * Don't use inline CSS on sticky elements
+* Floating and container element must be positioned first
